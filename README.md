@@ -5,7 +5,7 @@
 <br><br>
 <p align="center">
 <strong>
-Whispered is a stealthy Python-based application designed to operate quietly in the background. This tool is engineered to capture and send discord authentication tokens from the main Client. Using advanced cryptographic techniques and network protocols, Whisper ensures that all data is securely transferred to a discord webhook without leaving a trace.
+Crawler is a Python-based application designed to operate discreetly in the background. This tool is engineered to log and record keystrokes in real-time, capturing user input and sending it to your discord WebHook. You can give me a STAR ⭐ if you like my project.
 To use it you have to download all requierement with the install.bat file and then start the build.py file.
 </strong>
 </p>
