@@ -30,9 +30,9 @@ print("\n"*2)
 
 current_directory = os.getcwd()
 sleep(1.5)
-webhook = Write.Input("  [>] Enter your Discord Webhook : ", Colors.blue_to_cyan, interval=0.025)
+webhook = Write.Input("  [>] Enter your Discord Webhook -> ", Colors.blue_to_cyan, interval=0.025)
 sleep(1.5)
-fname = Write.Input("\n\n  [>] Enter the file name : ", Colors.blue_to_cyan, interval=0.025)
+fname = Write.Input("\n  [>] Enter the file name -> ", Colors.blue_to_cyan, interval=0.025)
 sleep(1.5)
 
 with open("Stalker.py", "r") as file:
@@ -68,8 +68,8 @@ if os.path.exists(input_script):
 print("\n"*2)
 print(Colorate.Vertical(Colors.blue_to_cyan, Center.XCenter(Stalker)))
 print("\n"*3)
-Write.Print("  [>] Stalker has been created by NinjaPanic on Github | https://github.com/NinjaPanic/Stalker", Colors.blue_to_cyan, interval=0.0125)
-Write.Print("\n  [>] Discord server : https://discord.gg/X9MxZ3JnXy", Colors.blue_to_cyan, interval=0.0125)
+Write.Print("  [>] Stalker has been created by NinjaPanic on Github | https://github.com/NinjaPanic/Stalker", Colors.blue_to_cyan)
+Write.Print("\n  [>] Discord server : https://discord.gg/X9MxZ3JnXy", Colors.blue_to_cyan)
 print("\n"*2)
 Write.Print("  [>] File has successfully been created in /EXE", Colors.blue_to_cyan, interval=0.0125)
-sleep(2)
+sleep(5)
