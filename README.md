@@ -1,11 +1,11 @@
 -----
 
-### <p align="center">⌨️ Stalker ⌨️</p>
+### <p align="center">⌨️ Crawler ⌨️</p>
 
 <br><br>
 <p align="center">
 <strong>
-Stalker is a Python-based application designed to operate discreetly in the background. This tool is engineered to log and record keystrokes in real-time, capturing user input and sending it to your discord WebHook. You can give me a STAR ⭐ if you like my project.
+Crawler is a Python-based application designed to operate discreetly in the background. This tool is engineered to log and record keystrokes in real-time, capturing user input and sending it to your discord WebHook. You can give me a STAR ⭐ if you like my project.
 To use it you have to download all requierement with the install.bat file and then start the build.py file.
 </strong>
 </p>
@@ -16,7 +16,7 @@ To use it you have to download all requierement with the install.bat file and th
 ### <p align="center">👀 ScreenShots 👀</p>
 
 <br><br>
-<img src="https://raw.githubusercontent.com/NinjaPanic/Images/refs/heads/main/Crawler_Capture.png">
+<img src="https://raw.githubusercontent.com/NinjaPanic/Images/refs/heads/main/Stalker_Capture.png">
 <br>
 
 -----

