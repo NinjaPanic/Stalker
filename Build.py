@@ -65,6 +65,7 @@ if os.path.exists(spec_file):
 if os.path.exists(input_script):
     os.remove(input_script)
 
+System.Clear()
 print("\n"*2)
 print(Colorate.Vertical(Colors.blue_to_cyan, Center.XCenter(Stalker)))
 print("\n"*3)

